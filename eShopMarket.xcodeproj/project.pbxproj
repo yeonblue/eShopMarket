@@ -3,16 +3,19 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		45160F5D265E4B7700AC6EB0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45160F5C265E4B7700AC6EB0 /* AppDelegate.swift */; };
 		45160F5F265E4B7700AC6EB0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45160F5E265E4B7700AC6EB0 /* SceneDelegate.swift */; };
-		45160F61265E4B7700AC6EB0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45160F60265E4B7700AC6EB0 /* ViewController.swift */; };
 		45160F64265E4B7700AC6EB0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45160F62265E4B7700AC6EB0 /* Main.storyboard */; };
 		45160F66265E4B7A00AC6EB0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 45160F65265E4B7A00AC6EB0 /* Assets.xcassets */; };
 		45160F69265E4B7A00AC6EB0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 45160F67265E4B7A00AC6EB0 /* LaunchScreen.storyboard */; };
+		45160F71265E643800AC6EB0 /* CategoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45160F70265E643800AC6EB0 /* CategoryCollectionViewController.swift */; };
+		45160F73265E651600AC6EB0 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45160F72265E651600AC6EB0 /* CategoryCollectionViewCell.swift */; };
+		45160F75265E68E700AC6EB0 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 45160F74265E68E700AC6EB0 /* GoogleService-Info.plist */; };
+		45160F77265E6AE900AC6EB0 /* FirebaseCollectionReference.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45160F76265E6AE900AC6EB0 /* FirebaseCollectionReference.swift */; };
 		D811D22FD4C34A21E75480B8 /* Pods_eShopMarket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C24E0599D441444613DDB078 /* Pods_eShopMarket.framework */; };
 /* End PBXBuildFile section */
 
@@ -21,11 +24,14 @@
 		45160F59265E4B7700AC6EB0 /* eShopMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = eShopMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		45160F5C265E4B7700AC6EB0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		45160F5E265E4B7700AC6EB0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		45160F60265E4B7700AC6EB0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		45160F63265E4B7700AC6EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		45160F65265E4B7A00AC6EB0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		45160F68265E4B7A00AC6EB0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		45160F6A265E4B7A00AC6EB0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		45160F70265E643800AC6EB0 /* CategoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewController.swift; sourceTree = "<group>"; };
+		45160F72265E651600AC6EB0 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		45160F74265E68E700AC6EB0 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		45160F76265E6AE900AC6EB0 /* FirebaseCollectionReference.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseCollectionReference.swift; sourceTree = "<group>"; };
 		C24E0599D441444613DDB078 /* Pods_eShopMarket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_eShopMarket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C352D0DC061514DEFFEBA0B5 /* Pods-eShopMarket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-eShopMarket.debug.xcconfig"; path = "Target Support Files/Pods-eShopMarket/Pods-eShopMarket.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -65,11 +71,14 @@
 			children = (
 				45160F5C265E4B7700AC6EB0 /* AppDelegate.swift */,
 				45160F5E265E4B7700AC6EB0 /* SceneDelegate.swift */,
-				45160F60265E4B7700AC6EB0 /* ViewController.swift */,
 				45160F62265E4B7700AC6EB0 /* Main.storyboard */,
+				45160F70265E643800AC6EB0 /* CategoryCollectionViewController.swift */,
+				45160F72265E651600AC6EB0 /* CategoryCollectionViewCell.swift */,
 				45160F65265E4B7A00AC6EB0 /* Assets.xcassets */,
 				45160F67265E4B7A00AC6EB0 /* LaunchScreen.storyboard */,
 				45160F6A265E4B7A00AC6EB0 /* Info.plist */,
+				45160F74265E68E700AC6EB0 /* GoogleService-Info.plist */,
+				45160F76265E6AE900AC6EB0 /* FirebaseCollectionReference.swift */,
 			);
 			path = eShopMarket;
 			sourceTree = "<group>";
@@ -80,7 +89,6 @@
 				C352D0DC061514DEFFEBA0B5 /* Pods-eShopMarket.debug.xcconfig */,
 				43C8DE3FA016E935393EA4F4 /* Pods-eShopMarket.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -152,6 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				45160F69265E4B7A00AC6EB0 /* LaunchScreen.storyboard in Resources */,
+				45160F75265E68E700AC6EB0 /* GoogleService-Info.plist in Resources */,
 				45160F66265E4B7A00AC6EB0 /* Assets.xcassets in Resources */,
 				45160F64265E4B7700AC6EB0 /* Main.storyboard in Resources */,
 			);
@@ -206,9 +215,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				45160F61265E4B7700AC6EB0 /* ViewController.swift in Sources */,
+				45160F73265E651600AC6EB0 /* CategoryCollectionViewCell.swift in Sources */,
 				45160F5D265E4B7700AC6EB0 /* AppDelegate.swift in Sources */,
+				45160F77265E6AE900AC6EB0 /* FirebaseCollectionReference.swift in Sources */,
 				45160F5F265E4B7700AC6EB0 /* SceneDelegate.swift in Sources */,
+				45160F71265E643800AC6EB0 /* CategoryCollectionViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
