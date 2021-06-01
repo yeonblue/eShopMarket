@@ -41,6 +41,29 @@ func saveCategoryToFirebase(_ category: Category) {
         .setData(makeCategoryFromDictionary(category) as! [String: Any])
 }
 
+// MARK: - Download Category
+func downloadCategoryFromFirebase(completion: @escaping (_ categoryArray: [Category]) -> Void) {
+    var categoryArray = [Category]()
+    
+    FirebaseReference(.Category).getDocuments { snapshot, err in
+        guard let snapshot = snapshot else {
+            completion(categoryArray)
+            return
+        }
+        
+        if snapshot.isEmpty {
+            completion(categoryArray)
+            return
+        } else {
+            for categoryDict in snapshot.documents {
+                categoryArray.append(Category(categoryDict.data() as NSDictionary))
+            }
+            
+            completion(categoryArray)
+        }
+    }
+}
+
 // MARK: - Helpers
 // reference 데이터를 바로 dictionary로는 변경 불가하므로 NSDictionrary 사용
 func makeCategoryFromDictionary(_ category: Category) -> NSDictionary {
