@@ -8,6 +8,7 @@
 import UIKit
 
 private let reuseIdentifier = "CategoryCell"
+private let categoryToItemSegueIdentifier = "categoryToItemSegue"
 private let itemForRow = 3
 private let sectionInsets = UIEdgeInsets(top: 20.0, left: 10.0, bottom: 20.0, right: 10.0)
 
@@ -30,6 +31,14 @@ class CategoryCollectionViewController: UICollectionViewController {
         
         loadCategories()
     }
+    
+    // MARK: - Navigation
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == categoryToItemSegueIdentifier {
+            let vc = segue.destination as! ItemsTableViewController
+            vc.category = sender as? Category
+        }
+    }
 }
 
 // MARK: - UICollectionViewDataSource
@@ -44,6 +53,15 @@ extension CategoryCollectionViewController {
                                                       for: indexPath) as! CategoryCollectionViewCell
         cell.generateCell(categoryArray[indexPath.row])
         return cell
+    }
+}
+
+// MARK: - UICollectionViewDelegate
+extension CategoryCollectionViewController {
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        performSegue(withIdentifier: categoryToItemSegueIdentifier,
+                     sender: categoryArray[indexPath.row])
     }
 }
 

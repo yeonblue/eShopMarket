@@ -23,4 +23,13 @@ struct Constants {
         static let kIMAGENAME = "imageName"
         static let kOBJECTID = "objectId"
     }
+    
+    struct Item {
+        static let kOBJECTID = "objectId"
+        static let kCATEGORY_ID = "categoryID"
+        static let kNAME = "name"
+        static let kDESCRIPTION = "description"
+        static let kPRICE = "price"
+        static let kIMAGELINKS = "imageLinks"
+    }
 }
