@@ -24,10 +24,12 @@ class CategoryCollectionViewController: UICollectionViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        print("DEBUG: CategoryCollectionViewController - viewDidLoad()")
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        print("DEBUG: CategoryCollectionViewController - viewDidAppear()")
         
         loadCategories()
     }
@@ -35,6 +37,7 @@ class CategoryCollectionViewController: UICollectionViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == categoryToItemSegueIdentifier {
+            print("DEBUG: CategoryCollectionViewController - prepare(ItemsTableViewController)")
             let vc = segue.destination as! ItemsTableViewController
             vc.category = sender as? Category
         }

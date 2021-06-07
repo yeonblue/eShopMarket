@@ -7,6 +7,8 @@
 
 import UIKit
 
+private let itemToAddItemSegueIdentifier = "itemToAddItemSegue"
+
 class ItemsTableViewController: UITableViewController {
 
     // MARK: - Properties
@@ -15,8 +17,19 @@ class ItemsTableViewController: UITableViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        print(category?.name)
+        print("DEBUG: ItemsTableViewController - viewDidLoad()")
+        print("DEBUG: \(category?.id ?? "no value in category")")
+    }
+}
+
+// MARK: - Navigaiton
+extension ItemsTableViewController {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == itemToAddItemSegueIdentifier {
+            let vc = segue.destination as? AddItemViewController
+            guard let category = self.category else { return }
+            vc?.category = category
+        }
     }
 }
 

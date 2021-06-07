@@ -25,6 +25,10 @@ struct Item {
         self.price = dictionary[Constants.Item.kPRICE] as? Double
         self.imageLinks = dictionary[Constants.Item.kIMAGELINKS] as? [String]
     }
+    
+    init() {
+        
+    }
 }
 
 // MARK: - Helpers
